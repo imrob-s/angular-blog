@@ -1,20 +1,20 @@
 <div class="container__big-card">
     <div class="big-card__photo">
-        <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/80C64C0B63382CD3ED2653356125F275F63D036028A77D38DC3286AD851A6833/scale?width=506&aspectRatio=2.00&format=jpeg"
+        <img src="{{ photoCover }}"
          alt=""
          srcset=""
         >
     </div>
     <div class="big-card__date">
-        <p>15 Setembro 2023</p>
+        <p>{{ cardDate }}</p>
     </div>
     <div class="big-card__title">
-        <h1><a href="#">Saiu a nova versão do Angular</a></h1>
+        <h1><a href="#">{{ cardTitle }}</a></h1>
     </div>
     <div class="big-card__description">
         <p>
             <a href="#">
-                Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Per aumento de cachacis, eu reclamis. Paisis, filhis, espiritis santis. Cevadis im ampola pa arma uma pindureta.
+                {{ cardDescription }}
             </a>
         </p>
     </div>
