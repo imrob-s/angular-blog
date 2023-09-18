@@ -2,33 +2,22 @@
 <div class="container__articles">
     <div class="articles__main">
         <app-big-card 
-        id="1"
-        cardDate="16 Set 2023"
-        photoCover="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/80C64C0B63382CD3ED2653356125F275F63D036028A77D38DC3286AD851A6833/scale?width=506&aspectRatio=2.00&format=jpeg"
-        cardTitle="O Retorno Triunfal do Homem de Ferro"
-        cardDescription= "A Marvel Studios está atualmente em fase de produção do mais recente filme do Homem de Ferro, trazendo aos fãs uma notícia empolgante. Este novo capítulo promete uma experiência cinematográfica repleta de ação e tecnologia de ponta, oferecendo reviravoltas emocionantes na jornada desse icônico super-herói de ferro!"
+        [id]="lastItem.id"
+        [cardDate]="lastItem.date"
+        [photoCover]="lastItem.photo"
+        [cardTitle]="lastItem.title"
+        [cardDescription]="lastItem.description"
         >
     </app-big-card>
     </div>
     <div class="articles__others">
-        <app-small-card
-        id="2"
-        photoCover="https://s.aficionados.com.br/imagens/tudo-sobre-capita-marvel_f.jpg"
-        cardDate="15 Set 2023"
-        cardTitle="Capitã Marvel: Rumores e Expectativas para a Próxima Aventura de Carol Danvers"
+        <app-small-card *ngFor="let item of previousItems"
+        [id]="item.id"
+        [cardDate]="item.date"
+        [photoCover]="item.photo"
+        [cardTitle]="item.title"
         ></app-small-card>
-        <app-small-card
-        id="3"
-        photoCover="https://cinepop.com.br/wp-content/uploads/2022/10/jorkerbamtan.jpg"
-        cardDate="10 Set 2023"
-        cardTitle="Batman vs. Coringa: Duelo Épico Revelado no Próximo Filme do Cavaleiro das Trevas"
-        ></app-small-card>
-        <app-small-card
-        id="4"
-        photoCover="https://cinepop.com.br/wp-content/uploads/2021/10/venom.jpg"
-        cardDate="29 Ago 2023"
-        cardTitle="Venom 3: Os Segredos por Trás da Evolução do Anti-herói Symbiote"
-        ></app-small-card>
+        
 
     </div>
 

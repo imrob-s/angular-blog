@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { dataFake } from 'src/app/data/dataFake';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  dataFakeList = dataFake;
+  
+  // Obtenha o último item da lista
+  lastItem = this.dataFakeList[this.dataFakeList.length - 1];
+  
+  // Obtenha os três itens anteriores
+  previousItems = this.dataFakeList.slice(0, this.dataFakeList.length - 1);
 
   constructor() { }
 
